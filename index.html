@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dimple Yoga Classes</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -15,7 +16,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f5fff8;
+background:#f4fff7;
 color:#222;
 }
 
@@ -25,10 +26,10 @@ padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 position:sticky;
 top:0;
 z-index:1000;
-box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .logo{
@@ -83,17 +84,16 @@ background:#43a047;
 color:white;
 border:none;
 border-radius:50px;
-font-size:16px;
-font-weight:600;
 text-decoration:none;
-margin-right:15px;
-transition:0.3s;
+font-weight:600;
 display:inline-block;
+transition:0.3s;
+margin-right:15px;
 }
 
 .btn:hover{
 background:#2e7d32;
-transform:translateY(-2px);
+transform:translateY(-3px);
 }
 
 .hero img{
@@ -138,8 +138,8 @@ color:#2e7d32;
 }
 
 .card p{
-color:#666;
 line-height:1.7;
+color:#666;
 }
 
 .schedule-table{
@@ -163,13 +163,12 @@ color:white;
 }
 
 .schedule-table tr:nth-child(even){
-background:#f4fff5;
+background:#f3fff4;
 }
 
 .login-section{
 background:linear-gradient(to right,#43a047,#66bb6a);
 padding:80px 8%;
-color:white;
 text-align:center;
 }
 
@@ -216,11 +215,10 @@ background:#2e7d32;
 .dashboard{
 display:none;
 padding:80px 8%;
-background:#ffffff;
 }
 
 .dashboard-box{
-background:#f4fff5;
+background:white;
 padding:30px;
 border-radius:20px;
 margin-bottom:25px;
@@ -235,194 +233,14 @@ text-align:center;
 box-shadow:0 8px 20px rgba(0,0,0,0.08);
 }
 
-.payment-box img{
-width:250px;
-max-width:100%;
-margin:20px 0;
-}
-
-.whatsapp-btn{
-background:#25D366;
-}
-
 footer{
 background:#1b5e20;
 color:white;
 text-align:center;
 padding:25px;
-margin-top:40px;
+margin-top:50px;
 }
 
-@media(max-width:900px){
-.hero{
-flex-direction:column;
-text-align:center;
-}
-
-.hero-text h1{
-font-size:40px;
-}
-
-nav{
-display:none;
-}
-}
-</style>
-</head>
-<body>
-
-<header>
-<div class="logo">Sri Bayan mata ji Kumbhalgarh</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#classes">Classes</a>
-<a href="#login">Login</a>
-<a href="#payment">Payment</a>
-</nav>
-</header>
-
-<section class="hero" id="home">
-<div class="hero-text">
-<h1>Join Live Online Yoga Classes From Home</h1>
-<p>
-Transform your body and mind with peaceful yoga sessions,
-meditation classes, and healthy lifestyle guidance.
-Attend classes online from anywhere.
-</p>
-
-<a href="#login" class="btn">Join Now</a>
-<a href="#classes" class="btn">View Classes</a>
-</div>
-
-<img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1200&auto=format&fit=crop" alt="Yoga">
-</section>
-
-<section class="section" id="about">
-<h2 class="section-title">Why Choose Us</h2>
-
-<div class="cards">
-<div class="card">
-<h3>Online Live Classes</h3>
-<p>Attend yoga sessions from your home through Zoom or Google Meet.</p>
-</div>
-
-<div class="card">
-<h3>Professional Guidance</h3>
-<p>Learn yoga, meditation, and breathing exercises with expert guidance.</p>
-</div>
-
-<div class="card">
-<h3>Flexible Timings</h3>
-<p>Morning and evening batches available for students and working people.</p>
-</div>
-</div>
-</section>
-
-<section class="section" id="classes">
-<h2 class="section-title">Class Schedule</h2>
-
-<table class="schedule-table">
-<tr>
-<th>Class</th>
-<th>Time</th>
-<th>Mode</th>
-<th>Fees</th>
-</tr>
-
-<tr>
-<td>Morning Yoga</td>
-<td>6:00 AM</td>
-<td>Online</td>
-<td>₹999 / Month</td>
-</tr>
-
-<tr>
-<td>Meditation</td>
-<td>7:00 PM</td>
-<td>Online</td>
-<td>₹799 / Month</td>
-</tr>
-
-<tr>
-<td>Weight Loss Yoga</td>
-<td>8:00 PM</td>
-<td>Online</td>
-<td>₹1199 / Month</td>
-</tr>
-</table>
-</section>
-
-<section class="login-section" id="login">
-<h2 class="section-title" style="color:white;">Student Login</h2>
-
-<button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
-<br><br>
-
-<div class="login-box fade-in">
-<h2>Login</h2>
-
-<input type="email" id="email" class="input-box" placeholder="Enter Email">
-<input type="password" id="password" class="input-box" placeholder="Enter Password">
-
-<button class="login-btn" onclick="loginUser()">Login</button>
-
-<br><br>
-
-<h2>Create Account</h2>
-<input type="email" id="signup-email" class="input-box" placeholder="Create Email">
-<input type="password" id="signup-password" class="input-box" placeholder="Create Password">
-<button class="login-btn" onclick="signupUser()">Signup</button>
-</div>
-</section>
-
-<section class="dashboard" id="dashboard">
-<h2 class="section-title">Student Dashboard</h2>
-
-<div class="dashboard-box">
-<h3>Today's Live Class</h3>
-<p>Morning Yoga — 6:00 AM</p>
-<br>
-<a href="javascript:void(0)" class="btn" onclick="joinZoom()">Join Zoom Class</a>
-</div>
-
-<div class="dashboard-box fade-in">
-<h3>Recorded Sessions</h3>
-<p>Access recorded yoga and meditation videos anytime.</p>
-<br>
-<button class="btn" onclick="openRecordedVideo()">Watch Recorded Class</button>
-</div>
-
-<div class="dashboard-box">
-<h3>Announcements</h3>
-<p>New meditation batch starts next Monday.</p>
-</div>
-</section>
-
-<section class="section" id="payment">
-<h2 class="section-title">Pay Online</h2>
-
-<div class="payment-box">
-<h3>Scan QR Code To Pay</h3>
-
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=UPI-PAYMENT" alt="QR Code">
-
-<p><strong>UPI ID:</strong> dimpleyoga@upi</p>
-<br>
-
-<input type="file" id="payment-proof" class="input-box">
-<button class="login-btn" onclick="verifyPayment()">Verify Payment</button>
-<br><br>
-<a href="https://wa.me/919999999999" class="btn whatsapp-btn">Send Payment Screenshot</a>
-</div>
-</section>
-
-<footer>
-<p>© 2026 Dimple Yoga Classes | All Rights Reserved</p>
-</footer>
-
-<style>
 .dark-mode{
 background:#121212;
 color:white;
@@ -437,7 +255,7 @@ background:#1f1f1f;
 color:white;
 }
 
-.fade-in{
+.fade{
 animation:fadeIn 1s ease;
 }
 
@@ -452,48 +270,203 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-text h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+}
 </style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">Dimple Yoga Classes</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#classes">Classes</a>
+<a href="#login">Login</a>
+<a href="#meeting">Meeting</a>
+</nav>
+</header>
+
+<section class="hero fade" id="home">
+
+<div class="hero-text">
+<h1>Join Live Online Yoga Classes</h1>
+
+<p>
+Transform your body and mind with online yoga,
+meditation, and wellness classes from home.
+</p>
+
+<a href="#login" class="btn">Join Now</a>
+<a href="#classes" class="btn">View Classes</a>
+</div>
+
+<img src="yoga.jpg" alt="Yoga Image">
+
+</section>
+
+<section class="section" id="about">
+
+<h2 class="section-title">Why Choose Us</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Live Online Classes</h3>
+<p>Attend yoga sessions live from your home through Zoom.</p>
+</div>
+
+<div class="card">
+<h3>Peaceful Learning</h3>
+<p>Improve flexibility, focus, meditation, and healthy lifestyle.</p>
+</div>
+
+<div class="card">
+<h3>Flexible Timings</h3>
+<p>Morning and evening yoga batches available.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="classes">
+
+<h2 class="section-title">Class Schedule</h2>
+
+<table class="schedule-table">
+
+<tr>
+<th>Class</th>
+<th>Time</th>
+<th>Fees</th>
+</tr>
+
+<tr>
+<td>Morning Yoga</td>
+<td>6:00 AM</td>
+<td>₹999</td>
+</tr>
+
+<tr>
+<td>Meditation</td>
+<td>7:00 PM</td>
+<td>₹799</td>
+</tr>
+
+<tr>
+<td>Weight Loss Yoga</td>
+<td>8:00 PM</td>
+<td>₹1199</td>
+</tr>
+
+</table>
+</section>
+
+<section class="login-section" id="login">
+
+<div class="login-box fade">
+
+<h2>Student Login</h2>
+
+<input type="email" id="email" class="input-box" placeholder="Enter Email">
+
+<input type="password" id="password" class="input-box" placeholder="Enter Password">
+
+<button class="login-btn" onclick="loginUser()">Login</button>
+
+<br><br>
+
+<button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+</div>
+</section>
+
+<section class="dashboard" id="dashboard">
+
+<h2 class="section-title">Student Dashboard</h2>
+
+<div class="dashboard-box">
+<h3>Today's Live Class</h3>
+
+<p>Morning Yoga - 6:00 AM</p>
+
+<br>
+
+<button class="btn" onclick="joinMeeting()">Join Zoom Meeting</button>
+</div>
+
+<div class="dashboard-box">
+<h3>Zoom Meeting Details</h3>
+
+<p><strong>Meeting ID:</strong> 360 688 0545</p>
+
+<p><strong>Passcode:</strong> 9774</p>
+
+<p><strong>Host:</strong> Sri Bayan Mata Ji Kumbhalgarh</p>
+
+</div>
+
+<div class="dashboard-box">
+<h3>Recorded Sessions</h3>
+
+<p>Watch recorded yoga classes anytime.</p>
+
+<br>
+
+<a href="https://www.youtube.com/" target="_blank" class="btn">Watch Videos</a>
+</div>
+
+</section>
+
+<section class="section" id="meeting">
+
+<h2 class="section-title">Online Meeting Access</h2>
+
+<div class="payment-box">
+
+<h3>Zoom Class Details</h3>
+
+<br>
+
+<p><strong>Meeting ID:</strong> 360 688 0545</p>
+
+<p><strong>Passcode:</strong> 9774</p>
+
+<p><strong>Host ID:</strong> Sri Bayan Mata Ji Kumbhalgarh</p>
+
+<br>
+
+<button class="btn" onclick="joinMeeting()">Join Meeting</button>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Dimple Yoga Classes | All Rights Reserved</p>
+</footer>
 
 <script>
-function toggleDarkMode(){
-document.body.classList.toggle('dark-mode');
-}
-
-function signupUser(){
-let signupEmail=document.getElementById('signup-email').value;
-let signupPassword=document.getElementById('signup-password').value;
-
-if(signupEmail==='' || signupPassword===''){
-alert('Please fill signup details');
-return;
-}
-
-localStorage.setItem('yogaEmail',signupEmail);
-localStorage.setItem('yogaPassword',signupPassword);
-
-alert('Signup Successful');
-}
-
-function verifyPayment(){
-let screenshot=document.getElementById('payment-proof').files.length;
-
-if(screenshot===0){
-alert('Please upload payment screenshot');
-return;
-}
-
-alert('Payment verification submitted successfully');
-}
-
-function openRecordedVideo(){
-window.open('https://www.youtube.com/watch?v=v7AYKMP6rOE','_blank');
-}
-
-function joinZoom(){
-window.open('https://zoom.us/j/123456789','_blank');
-}
 
 function loginUser(){
+
 let email=document.getElementById('email').value;
 let password=document.getElementById('password').value;
 
@@ -503,9 +476,25 @@ return;
 }
 
 alert('Login Successful');
+
 document.getElementById('dashboard').style.display='block';
+
 window.location.href='#dashboard';
 }
+
+function toggleDarkMode(){
+document.body.classList.toggle('dark-mode');
+}
+
+function joinMeeting(){
+
+window.open(
+'https://zoom.us/j/3606880545?pwd=9774',
+'_blank'
+);
+
+}
+
 </script>
 
 </body>
